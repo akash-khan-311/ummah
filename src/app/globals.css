@@ -1,0 +1,164 @@
+@import "tailwindcss";
+.banner-title {
+  font-family: "Galada", cursive;
+  color: #242f6c;
+  font-weight: 700;
+  overflow: hidden;
+}
+.font {
+  font-family: "Galada", cursive;
+}
+.title {
+  font-family: "Galada", cursive;
+  color: #242f6c;
+  font-weight: 700;
+}
+
+p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.8em;
+}
+
+.shadows {
+  box-shadow: 0px 2px 12.75px 2.25px rgba(51, 100, 219, 0.15);
+}
+
+.subheading {
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  background: -webkit-linear-gradient(left, #458491, #00ded8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.link {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.theme-btn {
+  background: #00c6d1;
+  background: -webkit-linear-gradient(left, #00a7d5, #00ded8);
+  background: -moz-linear-gradient(left, #00a7d5, #00ded8);
+  background: -o-linear-gradient(left, #00a7d5, #00ded8);
+  background: -ms-linear-gradient(left, #00a7d5, #00ded8);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#00a7d5),
+    to(#00ded8)
+  );
+  background: linear-gradient(left, #00a7d5, #00ded8);
+  color: #fff;
+  display: inline-block;
+
+  border: 0;
+  border-radius: 55px;
+  text-transform: capitalize;
+  -webkit-box-shadow: 0 0 0 5px #c8eaf5;
+  box-shadow: 0 0 0 5px #c8eaf5;
+  -webkit-backface-visibility: hidden;
+  z-index: 1;
+  position: relative;
+  line-height: 19px;
+}
+
+.theme-btn:hover:after {
+  opacity: 1;
+}
+
+.theme-btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 55px;
+  background: -webkit-linear-gradient(left, #00ded8, #00a7d5);
+  background: -moz-linear-gradient(left, #00ded8, #00a7d5);
+  background: -o-linear-gradient(left, #00ded8, #00a7d5);
+  background: -ms-linear-gradient(left, #00ded8, #00a7d5);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#00ded8),
+    to(#00a7d5)
+  );
+  background: linear-gradient(left, #00ded8, #00a7d5);
+  -webkit-transition: opacity 0.5sease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+  opacity: 0;
+  z-index: -1;
+}
+/* 
+.animation::before {
+
+} */
+
+body {
+  overflow-x: hidden;
+  background-color: #ebfafb;
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: rotate(150deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-girl {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(15px) translateX(7px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.animated::before {
+  animation: circle 60s linear infinite;
+}
+.girls-animated {
+  animation: bounce-girl 3s linear infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.animate-fadeOut {
+  animation: fadeOut 0.4s ease-in-out;
+}
